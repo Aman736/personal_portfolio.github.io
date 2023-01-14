@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rizwan_portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="msg.php"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+
+
+
+<body>
+
+
+    <div class="Navigation">
+        <nav class="navbar">
+
+            <div class="logo">Portfolio</div>
+
+            <ul class="nav-links">
+                <!-- USING CHECKBOX HACK -->
+                <input type="checkbox" id="checkbox_toggle" />
+                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+                <div class="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </div>
+            </ul>
+        </nav>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="info1" id="home">
+        <div class="nam">
+            <h1>Hi, I am <span>Md Rizwan</span></h1>
+            <p>I'm pre final year student of computer science
+                <br> i'm passionate about software developer.
+            </p>
+            <a href="https://drive.google.com/file/d/1gbXJcOjMUJpAkl9u7d17dPDvo2IkMFj_/view?usp=sharing">Resume</a>
+        </div>
+        <div class="photo">
+            <img src="images/mypic21.png" alt="Personal image" class="perimag">
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="info2" id="about">
+        <div class="photo2">
+            <br><br><br>
+            <img src="images/ab1.jpg" alt="" class="abtimg">
+        </div>
+        <div class="abt">
+            <h1>About me</h1>
+            <h5>3rd year <span>cse student</span></h5>
+            <p>Hey I am MD RIZWAN. i'm pursing my b.tech in computer sciecnce from motihari college of engineering,
+                motihari.
+                <br> i am aspiring software engineer. i'm mainly skilled with c++ and python, and proficient in data
+                structure and algorithm, Also in Frontend development.
+            </p>
+            <button type="button">Contact</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="info3" id="skills">
+        <div class="ttsk">
+            <h1>MY <span>SKILLS</span></h1>
+            <h3>Here is my skills to represent my Expertise</h3>
+        </div>
+
+        <p>HTML <span>&#9759;</span></p>
+        <div class="skil">
+            <div class="skils html">80%</div>
+        </div>
+        <br><br>
+
+        <p>CSS<span>&#9759;</span></p>
+        <div class="skil">
+            <div class="skils css">60%</div>
+        </div>
+        <br><br>
+
+        <p>JavaScript<span>&#9759;</span></p>
+        <div class="skil">
+            <div class="skils js">50%</div>
+        </div>
+        <br><br>
+
+        <p>C++<span>&#9759;</span></p>
+        <div class="skil">
+            <div class="skils c">85%</div>
+        </div>
+        <br><br>
+
+        <p>DSA (data structure and Algorithm)<span>&#9759;</span></p>
+        <div class="skil">
+            <div class="skils dsa">75%</div>
+        </div>
+        <br><br>
+
+        <p>Python<span>&#9759;</span></p>
+        <div class="skil">
+            <div class="skils python">70%</div>
+        </div>
+        <br><br>
+
+        <p>Java<span>&#9759;</span></p>
+        <div class="skil">
+            <div class="skils java">50%</div>
+        </div>
+        <br><br>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="info4" id="portfolio">
+        <div class="txt">
+            <h1>PORTFOLIO</h1>
+            <p>My Projects</p>
+        </div>
+        <div class="pro">
+            <div class="pro1"
+                style="background-image: url(images/pro1.jfif); background-repeat: no-repeat; background-size: 100%; background-position: center;">
+
+                <h1>COVID symptoms predictor</h1><br>
+                <p>Trained Machine learning for Symptoms
+                    <br>Deployed Machine Learning Model using Django
+                    <br>Designed user Interface using Html, CSS, Java Script.
+                </p>
+            </div>
+
+            <div class="pro1"
+                style="background-image: url(images/pro2.jfif); background-repeat: no-repeat; background-size: 100%; background-position: center;">
+
+                <h1>Created a website and deploy on Server</h1><br>
+                <p>Designed Online Study web page using html, CSS, java script
+                    <br>Deployed on Microsoft Azure virtual Machine
+                </p>
+            </div>
+
+            <div class="pro1"
+                style="background-image: url(images/pro3.jpg); background-repeat: no-repeat; background-size: 100%; background-position: center;">
+
+                <h1>Rent Predictor</h1><br>
+                <p>Trained Machine learning for Rent Prediction</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="info5" id="contact">
+        <div class="title5">
+            <h1>Get in Touch</h1>
+            <?php
+                if(!empty($msg1)){
+                    echo $msg1;
+                }
+            ?>
+        </div>
+        <div class="box">
+            <div class="box1 contact">
+                <h3>Send me message...</h3>
+
+                <form action="POST">
+                    <div class="formbox">
+                        <div class="row1">
+                            <div class="inputbox">
+                                <span>Name</span>
+                                <input type="text" placeholder="Enter Your Name:" name="user_name" required>
+                            </div>
+                            <div class="inputbox">
+                                <span>Email</span>
+                                <input type="email" placeholder="Enter Your Email:" name="user_email" required>
+                            </div>
+
+                        </div>
+
+                        <div class="row1">
+                            <div class="inputbox" style="width: 100%;">
+                                <span>subject</span>
+                                <input type="text" placeholder="Enter Your subject:" name="user_subject">
+                            </div>
+                        </div>
+
+                        <div class="row2">
+                            <div class="inputbox">
+                                <span>message</span>
+                                <textarea rows="6" placeholder="Type Your Message:" name="user_msg" required></textarea>
+                            </div>
+                        </div>
+                        <div class="row2">
+                            <div class="inputbox">
+                                <input type="submit" value="Send" name="contact_btn">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            
+
+            <div class="box2 contact">
+                <h3>Contact info:</h3>
+                <div class="infobox">
+
+                    <div>
+                        <span>Email:</span>
+                        <a href="mailto:mdrizwanb786@gmail.com">mdrizwanb786@gmail.com</a>
+                    </div>
+
+                    <div>
+                        <span>Phone:</span>
+                        <a href="tel:+917369855773">+91 73698 55773</a>
+                    </div>
+
+                    <div>
+                        <span>Leetcode:</span>
+                        <a href="https://leetcode.com/rizwan073">rizwan073</a>
+                    </div>
+
+                    <div>
+                        <a href="https://www.facebook.com/profile.php?id=100024560719282" class="fa fa-facebook"></a>
+                        <a href="https://www.instagram.com/__r_i_z_w_a_n_" class="fa fa-instagram"></a>
+                        <a href="https://www.linkedin.com/in/mdrizwan0" class="fa fa-linkedin"></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="last">
+        <p>All Right Reserverd By @Rizwan</p>
+    </div>
+
+
+
+</body>
+
+</html>
